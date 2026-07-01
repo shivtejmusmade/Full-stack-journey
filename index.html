@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Technologies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Nosifer&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 180px;
+        }
+
+        body {
+            font-family: "Assistant", sans-serif;
+            background: linear-gradient(135deg, #e0f7e9, #f0fff4);
+            color: #222;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: "Nosifer", cursive;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        header img{
+            height: 80px;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+
+
+        /* Layout */
+        main {
+            display: flex;
+            margin: 23px;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+
+        /* Cards container */
+        .cards {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 0px 20%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            color: #2e7d32;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+
+        .card button {
+            padding: 10px 18px;
+            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card button:hover {
+            background: linear-gradient(90deg, #1b5e20, #2e7d32);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #1b5e20, #2e7d32);
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            font-weight: 600;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            aside {
+                position: relative;
+                top: unset;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🌿 Frontend Technologies</h1>
+        <img src="logo.png" alt="logo">
+    </header>
+
+    <!-- Main Layout -->
+    <main>
+
+        <div class="cards">
+            <!-- HTML Card -->
+            <a href="./HTML/index.html">
+                <div class="card" id="html">
+                    <h2>HTML</h2>
+                    <p>HTML is the foundation of all web pages. <br> It structures content using elements and tags.</p>
+                    <button>Learn More</button>
+                </div>
+            </a>
+
+            <!-- CSS Card -->
+            <a href="./CSS/demo/index.html">
+                <div class="card" id="css">
+                    <h2>CSS</h2>
+                    <p>CSS styles your HTML content. <br>Customize colors, background, fonts, layouts, and make your website responsive.
+                    </p>
+                    <button>Learn More</button>
+                </div>
+            </a>
+
+            <!-- JavaScript Card -->
+            <a href=""><div class="card" id="javascript">
+                <h2>JavaScript</h2>
+                <p>JavaScript brings interactivity to websites. You can manipulate elements, handle events, and create
+                    dynamic content.</p>
+                <button>Learn More</button>
+            </div></a>
+            <!-- jQuery Card -->
+            <a href="">
+                <div class="card" id="jquery">
+                <h2>jQuery</h2>
+                <p>jQuery is a fast, small, and feature-rich JavaScript library. It simplifies DOM manipulation, event
+                    handling, and AJAX calls.</p>
+                <button>Learn More</button>
+            </div>
+            </a>
+            <!-- Bootstrap Card -->
+           <a href="./BOOTSTRAP/code/index.html">
+             <div class="card" id="bootstrap">
+                <h2>Bootstrap</h2>
+                <p>Bootstrap is a CSS framework for building responsive, mobile-first websites using pre-designed
+                    components.</p>
+                <button>Learn More</button>
+            </div>
+           </a>
+
+            <!-- React Card -->
+            <a href="">
+                <div class="card" id="react">
+                <h2>React</h2>
+                <p>React is a JavaScript library for building modern user interfaces with reusable components and state
+                    management.</p>
+                <button>Learn More</button>
+            </div>
+            </a>
+
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Frontend Technologies Tutorial | Designed by <strong>Shiva Musmade</strong>
+    </footer>
+</body>
+
+</html>

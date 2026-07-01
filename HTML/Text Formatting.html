@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting & Semantic HTML</title>
+    <link rel="stylesheet" href="../codes/css/style.css">
+    <script src="../codes/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Fondamento:ital@0;1&family=Nosifer&family=Poppins&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <style>
+        dd {
+            margin-left: 50px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Text Formatting's Tags in HTML</h1>
+        <nav>
+            <a href="Introduction to Web Development.html">PREVIOUS⏮️</a>
+            <a href="index.html"> 🏠HOME </a>
+            <a href="Semantic Tags.html">NEXT⏭️</a>
+            <button id="modeToggle" class="run" style="float:right; margin-top:10px;">
+                🌙 Dark Mode
+            </button>
+            <a href="../index.html"><img src="../logo.png" alt="logo" style="height: 80px; position: absolute; top: 5px; left: 10px;"></a>
+        </nav>
+    </header>
+
+    <main>
+
+        <aside>
+
+            <h3>🧠 HTML Text Formatting Tags</h3>
+            <a href="#b">1. &lt;b&gt; - Bold Text</a>
+            <a href="#i">2. &lt;i&gt; - Italic Text</a>
+            <a href="#u">3. &lt;u&gt; - Underlined Text</a>
+            <a href="#m">4. &lt;mark&gt; - Highlighted Text</a>
+            <a href="#sub">5. &lt;sub&gt; - Subscript Text</a>
+            <a href="#sup">6. &lt;sup&gt; - Superscript Text</a>
+            <a href="#small">7. &lt;small&gt; - Smaller Text</a>
+            <a href="#strike">8. &lt;s&gt; - Strikethrough Text</a>
+            <a href="#del">9. &lt;del&gt; - Deleted Text</a>
+            <a href="#ins">10. &lt;ins&gt; - Inserted Text</a>
+            <a href="#big">11. &lt;big&gt; - Enlarged Text</a>
+            <a href="#tt">12. &lt;tt&gt; - Teletype Text</a>
+
+        </aside>
+        <section class="main">
+            <section class="data" id="formatting">
+                <h2>🧠 HTML Text Formatting Tags</h2>
+                <hr>
+                <p>
+                    ► <strong>Text formatting</strong> tags allow us to emphasize or style specific portions of text.
+                    <br>
+                    ► Text formatting tags are used to visually style content in HTML. <br>
+                    ► Some tags carry semantic meaning, while others are purely visual and non-semantic.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Purpose</th>
+                            <th>Semantic?</th>
+                            <th>HTML5?</th>
+                            <th>Deprecated?</th>
+                            <th>Replacement / Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;b&gt;</code></td>
+                            <td>Bold (non-semantic)</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>Use <code>&lt;strong&gt;</code> for importance</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;i&gt;</code></td>
+                            <td>Italic (non-semantic)</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>Use <code>&lt;em&gt;</code> for emphasis</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;u&gt;</code></td>
+                            <td>Underline</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>Use <code>&lt;ins&gt;</code> or CSS</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;mark&gt;</code></td>
+                            <td>Highlight</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>New in HTML5</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;sub&gt;</code></td>
+                            <td>Subscript</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;sup&gt;</code></td>
+                            <td>Superscript</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;small&gt;</code></td>
+                            <td>Smaller text</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;s&gt;</code></td>
+                            <td>Strikethrough</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>Use <code>&lt;del&gt;</code> for semantics</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;del&gt;</code></td>
+                            <td>Deleted content</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>Semantic delete</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;ins&gt;</code></td>
+                            <td>Inserted content</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>Semantic insert</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;big&gt;</code></td>
+                            <td>Big font (non-semantic)</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>Use CSS: <code>font-size</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tt&gt;</code></td>
+                            <td>Teletype (monospace)</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>Use <code>&lt;code&gt;</code> or CSS</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section class="data" id="b">
+                <h2>1. &lt;b&gt; - Bold Text (Visual Only)</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Highlights text by making it bold, but without giving it importance in meaning.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;This is a <strong>&lt;b&gt;bold&lt;/b&gt;</strong> word.&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">This is a <b>bold</b> word.</dd>
+                </dl>
+            </section>
+
+            <section class="data" id="i">
+                <h2>2. &lt;i&gt; - Italic Text (Visual Only)</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Displays text in italics, used for stylistic purposes without emphasizing importance.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;This is an <strong>&lt;i&gt;italic&lt;/i&gt;</strong> word.&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">This is an <i>italic</i> word.</dd>
+                </dl>
+            </section>
+
+            <section class="data" id="u">
+                <h2>3. &lt;u&gt; - Underlined Text</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Underlines text for visual styling, without implying emphasis or importance.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;This is an <strong>&lt;u&gt;underlined&lt;/u&gt;</strong> word.&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">This is an <u>underlined</u> word.</dd>
+                </dl>
+            </section>
+
+            <section class="data" id="m">
+                <h2>4. &lt;mark&gt; - Highlighted Text</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Highlights text to bring attention to it, typically with a yellow background.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;This is a <strong>&lt;mark&gt;highlighted&lt;/mark&gt;</strong> word.&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">This is a <mark>highlighted</mark> word.</dd>
+                </dl>
+            </section>
+
+            <section class="data" id="sub">
+                <h2>5. &lt;sub&gt; - Subscript Text</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Displays text slightly below the normal line, commonly used in chemical formulas or math.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre class="code"><code>&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O is water.&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">H<sub>2</sub>O is water.</dd>
+                </dl>
+            </section>
+
+            <section class="data" id="sup">
+                <h2>6. &lt;sup&gt; - Superscript Text</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Displays text slightly above the normal line, often used for footnotes, exponents, etc.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre class="code"><code>&lt;p&gt;E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">E = mc<sup>2</sup></dd>
+                </dl>
+            </section>
+
+            <section class="data" id="small">
+                <h2>7. &lt;small&gt; - Smaller Text</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Reduces the font size of the text, typically used for disclaimers or fine print.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;All rights reserved <strong>&lt;small&gt;© 2025&lt;/small&gt;</strong>&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">All rights reserved <small>© 2025</small></dd>
+                </dl>
+            </section>
+
+            <section class="data" id="strike">
+                <h2>8. &lt;s&gt; - Strikethrough Text (Visual Only)</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Visually strikes through text to show it's no longer relevant or valid (e.g., old prices).
+                    </dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;Was <strong>&lt;s&gt;$50&lt;/s&gt;</strong> now $30&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">Was <s>$50</s> now $30</dd>
+                </dl>
+            </section>
+
+            <section class="data" id="del">
+                <h2>9. &lt;del&gt; - Deleted Text</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Indicates content that has been removed or is no longer accurate.<br>
+                        ➤ Visually rendered as strikethrough in most browsers.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;This product was <strong>&lt;del&gt;$100&lt;/del&gt;</strong>&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">This product was <del>$100</del></dd>
+                </dl>
+            </section>
+
+            <section class="data" id="ins">
+                <h2>10. &lt;ins&gt; - Inserted Text</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Represents newly added content.<br>
+                        ➤ Typically underlined in browsers.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;Now available for <strong>&lt;ins&gt;$80&lt;/ins&gt;</strong>&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">Now available for <ins>$80</ins></dd>
+                </dl>
+            </section>
+
+            <section class="data" id="big">
+                <h2>11. &lt;big&gt; - Enlarged Text (Obsolete)</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Makes the text slightly larger than surrounding text.<br>
+                        ➤ Obsolete in HTML5 — use CSS instead.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;This is <strong>&lt;big&gt;bigger&lt;/big&gt;</strong> text.&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">This is <big>bigger</big> text.</dd>
+                </dl>
+            </section>
+
+            <section class="data" id="tt">
+                <h2>12. &lt;tt&gt; - Teletype Text (Obsolete)</h2>
+                <hr>
+                <dl>
+                    <dt>Purpose :</dt>
+                    <dd>➤ Renders text in a monospaced (typewriter-like) font.<br>
+                        ➤ Deprecated — use &lt;code&gt; or CSS for monospaced styling.</dd>
+
+                    <dt>Syntax/Example:</dt>
+                    <dd>
+                        <pre
+                            class="code"><code>&lt;p&gt;This is <strong>&lt;tt&gt;teletype&lt;/tt&gt;</strong> text.&lt;/p&gt;</code></pre>
+                    </dd>
+
+                    <dt>Output :</dt>
+                    <dd class="output">This is <tt>teletype</tt> text.</dd>
+                </dl>
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p> © 2025 HTML Tutorial Project. Designed by <cite>SHIVA MUSMADE</cite>.</p>
+    </footer>
+</body>
+
+</html>

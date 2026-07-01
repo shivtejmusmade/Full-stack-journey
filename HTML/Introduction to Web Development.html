@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="../codes/css/style.css">
+    <script src="../codes/js/script.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Fondamento:ital@0;1&family=Nosifer&family=Poppins&family=Young+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header style="padding: 35px;">
+        <h1>Introduction to Web Development + HTML Basics</h1>
+        <nav>
+            <a href="index.html"> 🏠HOME </a>
+            <a href="Text Formatting.html">NEXT⏭️</a>
+
+        </nav>
+        <button id="modeToggle" class="run" style="float:right; margin-top:10px;">
+            🌙 Dark Mode
+        </button>
+        <a href="../index.html"><img src="../logo.png" alt="logo" style="height: 80px; position: absolute; top: 5px; left: 10px;"></a>
+    </header>
+    <main>
+
+        <aside>
+            <div>
+                <a href="#webdev">1] What is Web Development?</a>
+                <a href="#webstruct">2] HTML Web Structure Role.</a>
+                <a href="#skeleton">3] Basic HTML Page Skeleton.</a>
+                <a href="#h&p">4] Headings and Paragraphs.</a>
+                <a href="#br&hr">5] Line Breaks & Horizontal Rules.</a>
+                <a href="#comments">6] Comments in HTML.</a>
+                <a href="#Whitespace">7] Whitespace, Formatting & Indentation Best Practices</a>
+                <a href="#devtool">8] Developer Tools (DevTools).</a>
+                <a href="#vs">9] Setting up VS Code + Live Server.</a>
+                <a href="#source">10] Viewing Source Code & Debugging Invalid HTML.</a>
+                <a href="#usecase">🧠 Use Case Analogy</a>
+                <a href="#commonmis">⚠️ Common Pitfalls to Avoid</a>
+                <a href="#task">🏗️ TASK: Build an “About Me” Web Page</a>
+            </div>
+        </aside>
+        <section class="main">
+            <section class="data" id="webdev">
+                <h2>🧠 1. What is Web Development?</h2>
+                <hr>
+                <p>
+                    ► Web development is the process of creating websites or web applications that run in a web browser.
+                </p>
+                <table>
+                    <caption>Types of Web Development:</caption>
+                    <tr>
+                        <th>Type </th>
+                        <th>Description </th>
+                    </tr>
+                    <tr>
+                        <th>Frontend</th>
+                        <td>User-facing part of the website (HTML, CSS, JS)</td>
+                    </tr>
+                    <tr>
+                        <th>Backend</th>
+                        <td>Server-side logic, databases, APIs (Node, PHP, etc.)</td>
+                    </tr>
+                    <tr>
+                        <th>Full-Stack</th>
+                        <td>Combination of both frontend and backend</td>
+                    </tr>
+                </table>
+                <em>💡 Think of frontend as the design and interaction, and backend as the logic and data handling.</em>
+            </section>
+
+            <section class="data" id="webstruct">
+                <h2>🔗 2. Role of HTML in Web Structure</h2>
+                <hr>
+                <p>
+                    ► HTML (HyperText Markup Language) is the foundation of all web pages.
+                </p>
+                <ul>
+                    It structures content using tags to define elements like:
+                    <li> Headings</li>
+                    <li> Paragraphs</li>
+                    <li> Images</li>
+                    <li> Links</li>
+                    <li> Lists</li>
+                </ul>
+                <i>📌 HTML ≈ Skeleton of a website. CSS = Style, JS = Behavior.</i>
+            </section>
+
+            <section class="data" id="skeleton">
+                <h2>🏗️ 3. Basic HTML Page Skeleton</h2>
+                <hr>
+                <pre class="code">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;My First Page&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+            &lt;p&gt;This is my first web page.&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+<button class="run" onclick="skeleton()"> CHECK THE OUTPUT</button>
+
+<div class="output" id="output"></div></pre>
+                <h3>🔍 Explanation:</h3>
+                <p>
+                    1. &lt;!DOCTYPE html&gt; = Declares HTML5 version. <br>
+                    2. &lt;html&gt; = Root element of the document. <br>
+                    3. &lt;head&gt; = Contains metadata (title, links, scripts). <br>
+                    4. &lt;title&gt; = Sets the browser tab title. <br>
+                    5. &lt;body&gt; = Main visible content of the page.
+                </p>
+            </section>
+
+            <section class="data" id="h&p">
+                <h2>🔡 4. Headings and Paragraphs</h2>
+                <hr>
+                <h3>✅ Headings (&lt;h1&gt; to &lt;h6&gt;):</h3>
+                <p>
+                    ► Six levels, from most important to least. <br>
+                    ► Search engines use the headings to index the structure and content of your web pages. <br>
+                    ► Users often skim a page by its headings. It is important to use headings to show the document
+                    structure. <br>
+                    ► &lt;h1&gt; headings should be used for main headings, followed by &lt;h2&gt; headings, then the
+                    less important &lt;h3&gt;, and so on.
+                <h5>⚠ Use only one &lt;h1&gt; per page for SEO best practices.</h5>
+                </p>
+                <pre class="code">
+<b><small>Syntax :</small></b>
+    &lt;h1&gt;Heading 1&lt;/h1&gt;
+    &lt;h2&gt;Heading 2&lt;/h2&gt;
+    &lt;h3&gt;Heading 3&lt;/h3&gt;
+    &lt;h4&gt;Heading 4&lt;/h4&gt;
+    &lt;h5&gt;Heading 5&lt;/h5&gt;
+    &lt;h6&gt;Heading 6&lt;/h6&gt; 
+<button class="run" onclick="headings()">CHECK THE OUTPUT</button>
+
+<div id="output1" class="output"></div></pre>
+                <hr>
+                <h3>✅ Paragraphs (&lt;p&gt;):</h3>
+                <p>
+                    ► The HTML &lt;p&gt; element defines a paragraph. <br>
+                    ► Used for text blocks. <br>
+                    ► A paragraph always starts on a new line, and browsers automatically add some white space (a
+                    margin)
+                    before and after a paragraph.
+                </p>
+                <pre class="code">
+<b><small>Syntax :</small></b>
+    &lt;p&gt; This is a paragraph of text.&lt;/p&gt;
+<button class="run" onclick="paragraph()">CHECK THE OUTPUT</button>
+
+<div id="output2" class="output"></div></pre>
+                </pre>
+            </section>
+
+            <section class="data" id="br&hr">
+                <h2>↩️ 5. Line Breaks and Horizontal Rules</h2>
+                <hr>
+                <h3>✅ Line Break: &lt;br&gt;</h3>
+                <p>
+                    ► Creates a line break within a paragraph or text. <br>
+                    ► The &lt;br&gt; tag inserts a single line break. <br>
+                    ► The &lt;br&gt; tag is useful for writing addresses or poems. <br>
+                    ► The &lt;br&gt; tag is an empty tag which means that it has no end tag. <br>
+                </p>
+                <hr>
+                <h3>✅ Horizontal Rule: &lt;hr&gt;</h3>
+                <p>
+                    ► The &lt;hr&gt; tag defines a thematic break in an HTML page (e.g. a shift of topic). <br>
+                    ► Adds a horizontal line, used for visual separation.<br>
+                    ► The &lt;hr&gt; element is most often displayed as a horizontal rule that is used to separate
+                    content (or define a change) in an HTML page.
+                </p>
+            </section>
+
+            <section class="data" id="comments">
+                <h2>💬 6. Comments in HTML</h2>
+                <hr>
+                <p>
+                    ► Comments are not displayed in the browser. <br>
+                    ► Useful for explaining code or temporarily hiding code.
+                </p>
+                <pre class="code">
+<b><small>Syntax :</small></b>
+    <span style="color: green;">&lt;!-- Write your comments here &
+    this not display on browser--&gt;</span>
+    &lt;p&gt; This is print on browser &lt;/p&gt;
+<button class="run" onclick="comment()"> CHECK THE OUTPUT</button>
+
+<div class="output" id="output3"></div></pre>
+            </section>
+
+            <section class="data" id="Whitespace">
+                <h2>🧼 7. Whitespace, Formatting & Indentation Best Practices</h2>
+                <hr>
+                <br>
+                <table>
+                    <tr>
+                        <th>Practice</th>
+                        <th>Why It Matters</th>
+                    </tr>
+                    <tr>
+                        <td>✅ Proper indentation</td>
+                        <td>Increases readability</td>
+                    </tr>
+                    <tr>
+                        <td>✅ Consistent</td>
+                        <td>spacing Maintains clean code</td>
+                    </tr>
+                    <tr>
+                        <td>❌ Avoid unnecessary blank lines</td>
+                        <td>Keeps code compact</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>✅ Close all tags properly</td>
+                        <td>Prevents layout or rendering issues</td>
+                    </tr>
+                </table><br>
+                <h5>✍️ Indent child elements using 2 or 4 spaces (never tabs, ideally).</h5>
+            </section>
+
+            <section class="data" id="devtool">
+                <h2>🛠️ 8. Developer Tools (DevTools)</h2>
+                <hr>
+                <p>To inspect elements in your browser:</p>
+                <ul>
+                    <b>Shortcut:</b><br>
+                    <li>Right-click → Inspect</li>
+                    <li>Or press F12 or Ctrl+Shift+I</li>
+                    <b>What You Can Do:</b><br>
+                    <li>View & modify HTML/CSS</li>
+                    <li>Debug layout issues</li>
+                    <li>Check accessibility</li>
+                    <li>Console for errors</li>
+                </ul>
+            </section>
+
+            <section class="data" id="vs">
+                <h2>💻 9. Setting up VS Code + Live Server</h2>
+                <hr>
+                <ol>
+                    <b>🔹 Steps:</b><br>
+                    <li>Download & <b>Install VS Code</b></li>
+                    <li>Install <b>Live Server</b> extension</li>
+                    <li>Right-click your HTML file → Click <b>“Open with Live Server”</b></li>
+                    <li>Your page will open in browser and auto-refresh on save.</li>
+                </ol>
+                <br>
+                <a href="https://code.visualstudio.com/download" style="color: black;"><b>CLICK HERE TO DOWNLOAD Vs Code
+                    </b>→<u style="color: blue;">https://code.visualstudio.com/download</u></a>
+            </section>
+
+            <section class="data" id="source">
+                <h2>🔍 10. Viewing Source Code & Debugging Invalid HTML</h2>
+                <hr>
+                <ul>
+                    <b>View Source:</b><br>
+                    <li>Right-click page → View Page Source</li>
+                    <li>Shortcut: Ctrl + U</li>
+                    <b>Debugging Tips:</b><br>
+                    <li>Use W3C Validator: <a href="https://validator.w3.org"><u
+                                style="color: blue;">https://validator.w3.org</u></a></li>
+                    <li>Look for:
+                        <ul>
+                            <li>Missing closing tags</li>
+                            <li>Improper nesting</li>
+                            <li>Deprecated elements</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="data" id="usecase">
+                <h2>🧠 Use Case Analogy</h2>
+                <hr>
+                <p>
+                    ► HTML is like the blueprint of a building. <br>
+                    ► It defines the structure but doesn't make it look stylish or interactive.
+                </p>
+                <ul>
+                    <li>CSS = Paint & Design</li>
+                    <li>JS = Electric & Moving parts</li>
+                </ul>
+            </section>
+
+            <section class="data" id="commonmis">
+                <h2>⚠️ Common Pitfalls to Avoid</h2>
+                <hr>
+                <br>
+                <table>
+                    <tr>
+                        <th>Mistake</th>
+                        <th>Consequence</th>
+                    </tr>
+                    <tr>
+                        <td>❌ Forgetting to close tags</td>
+                        <td>Broken layout or rendering</td>
+                    </tr>
+                    <tr>
+                        <td>❌ Improper tag nesting</td>
+                        <td>Invalid HTML</td>
+                    </tr>
+                    <tr>
+                        <td>❌ Skipping &lt;!DOCTYPE html&gt;</td>
+                        <td>Browser might misinterpret version</td>
+                    </tr>
+                    <tr>
+                        <td>❌ Using multiple &lt;h1&gt; tags</td>
+                        <td>SEO penalty or accessibility issue </td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="data" id="task">
+                <h2>🏗️ TASK: Build an “About Me” Web Page</h2>
+                <hr>
+                <ul>
+                    <b>✅ Requirements:</b><br>
+                    <li>Use proper HTML structure </li>
+                    <li>Include:
+                        <ul>
+                            <li>&lt;h1&gt; with your name </li>
+                            <li>&lt;p&gt; describing yourself</li>
+                            <li>&lt;hr&gt; ti seperate content</li>
+                            <li>&lt;br&gt; where needed</li>
+                        </ul>
+                    </li>
+                    <li>Add commment to describe sections</li>
+                    <li>Format and indent properly</li>
+                </ul>
+
+                <b>📝 Sample:</b><br>
+                <pre class="code">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;About Me&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            <span style="color: darkgreen;">&lt;!-- Main Heading --&gt;</span>
+            &lt;h1&gt;SHIVTEJ MUSMADE&lt;/h1&gt;
+
+            <span style="color: darkgreen;">&lt;!-- About paragraph --&gt;</span>
+            &lt;p&gt;Hello! I'm a passionate learner on a journey to master web development.&lt;br&gt;
+            I love HTML, CSS, and building cool things online.&lt;/p&gt;
+
+            &lt;hr&gt;
+
+            <span style="color: darkgreen;">&lt;!-- Footer note --&gt;</span>
+            &lt;p&gt;Thank you for visiting!&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+<button class="run" onclick="example()"> CHECK THE OUTPUT</button>
+
+<div class="output" id="output4"></div></pre>
+
+            </section>
+
+        </section>
+    </main>
+
+
+
+    <footer>
+        © 2025 HTML Tutorial Project. Designed by <cite>SHIVA MUSMADE </cite>💻❤️.</cite>
+    </footer>
+
+
+
+
+    <script>
+        // 🧱 BASIC HTML EXAMPLES
+        function skeleton() {
+            document.getElementById("output").innerHTML = `
+                <h1>Welcome to My Website</h1>
+            <p>This is my first web page.</p> `;
+        }
+
+        function headings() {
+            document.getElementById("output1").innerHTML = `
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    `;
+        }
+
+        function paragraph() {
+            document.getElementById("output2").innerHTML = `
+        <p>This is a paragraph of text.</p>
+    `;
+        }
+
+        function comment() {
+            document.getElementById("output3").innerHTML = `
+        <!-- Write your comments here & this not display on browser -->
+        <p>This is print on browser</p>
+    `;
+        }
+
+        function example() {
+            document.getElementById("output4").innerHTML = ` <!-- Main Heading -->
+                <h1>SHIVTEJ MUSMADE</h1>
+
+                <!-- About paragraph -->
+                <p>Hello! I'm a passionate learner on a journey to master web development.<br>
+                I love HTML, CSS, and building cool things online.</p>
+
+                <hr>
+
+                <!-- Footer note -->
+                <p>Thank you for visiting!</p>
+    `;
+        }
+    </script>
+</body>
+
+</html>
